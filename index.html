@@ -5,6 +5,7 @@
     <meta name="author" content="Gyuri">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>박규리 포트폴리오</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
@@ -14,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="js/tilt.jquery.js"></script>
 
 </head>
 <body>
@@ -22,7 +24,7 @@
         <div class="main">
             <div class="main_vis">
                 <div class="bg"></div>
-                <div class="con">
+                <div class="con" data-tilt>
                     <div class="vis_tit">
                         <h2 class="t_f link link--line" data-letters="WEB PUBLISHER">WEB PUBLISHER</h2>
                         <h2 class="t_s link link--line" data-letters="PORTFOLIO">PORTFOLIO</h2>
@@ -32,7 +34,18 @@
                      <div class="vis_img front"><img src="img/banner/bn_vis_front1.png" alt="박규리 사진"></div>
                 </div>
             </div>
-            <div class="main_about"></div>
+            <div class="main_about">
+                <div class="con">
+                    <div class="greet">
+                        <strong>안녕하세요!</strong>
+                        <div class="changing-title"><strong>웹 퍼블리셔</strong></div>
+                        <strong>박규리 입니다:-) </strong>
+                    </div>
+                    <div class="keyword">
+                        
+                    </div>
+                </div>
+            </div>
             <div class="main_proj"></div>
             <div class="main_cont"></div>
         </div>

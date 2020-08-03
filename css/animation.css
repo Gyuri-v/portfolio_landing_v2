@@ -1,3 +1,5 @@
+/* main >> main_vis -- text link line event */
+
 /* General link styles */
 .link {
 	outline: none;
@@ -89,4 +91,61 @@
 @keyframes v_t_txt {
   0%   { width: 0%; }
   100% { width: 100%; }
+}
+
+
+
+/* main >> main_about  >> greet -- text changing event */
+@keyframes letter-in {
+  0% {
+    top: 28px;
+  }
+  100% {
+    top: 0em;
+  }
+}
+@keyframes letter-out {
+  0% {
+    top: 0em;
+  }
+  100% {
+    top: -28px;
+  }
+}
+
+.changing-title {
+    font-size: 28px;
+    width: 220px; height: 28px;
+    display: inline-block;
+    position: relative;
+    overflow-y: hidden;
+    margin-left: 10px;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+}
+.changing-title strong {
+    color: #dddad2;
+    font-weight: bold;
+    font-size: 28px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+}
+.letter {
+    position: relative;
+    top: 28px;
+}
+.in {
+    animation-name: letter-in;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+.out {
+    top: 0;
+    animation-name: letter-out;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
 }
