@@ -1,0 +1,92 @@
+/* General link styles */
+.link {
+	outline: none;
+	text-decoration: none;
+	position: relative;
+    top: 0; left: 50%;
+    transform: translate(-50%, 0);
+	font-size: 8em;
+	line-height: 1;
+	color: #9e9ba4;
+	display: inline-block;
+}
+
+/* line */
+.link--line {
+	text-transform: uppercase;
+	font-weight: 900;
+	overflow: hidden;
+	line-height: 0.75;
+	color: transparent;
+}
+
+.link--line::after {
+	content: '';
+	position: absolute;
+	height: 16px;
+	width: 100%;
+	top: 50%;
+	margin-top: -8px;
+	right: 0;
+	background: #F9F9F9;
+	-webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0);
+    -webkit-animation: v_t_line 0.5s 1;
+    animation: v_t_line 0.5s 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.7,0,0.3,1);
+    animation-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+.link--line.t_s::after {
+	-webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+.link--line.t_t::after {
+	-webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+@-webkit-keyframes v_t_line {
+  0%   { -webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0); }
+  100% { -webkit-transform: translate3d(100%,0,0);
+	transform: translate3d(100%,0,0); }
+}
+@keyframes v_t_line {
+  0%   { -webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0); }
+  100% { -webkit-transform: translate3d(100%,0,0);
+	transform: translate3d(100%,0,0); }
+}
+
+.link--line::before {
+	content: attr(data-letters);
+	position: absolute;
+	z-index: 2;
+	overflow: hidden;
+	color: #c5c2b8;
+	white-space: nowrap;
+	width: 0%;
+    -webkit-animation: v_t_txt 0.5s 1;
+    animation: v_t_txt 0.5s 1;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.link--line.t_s::before {
+	-webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.link--line.t_t::before {
+	-webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+@-webkit-keyframes v_t_txt {
+  0%   { width: 0%; }
+  100% { width: 100%; }
+}
+@keyframes v_t_txt {
+  0%   { width: 0%; }
+  100% { width: 100%; }
+}
