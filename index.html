@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>                
@@ -16,6 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="js/tilt.jquery.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 <body>
@@ -24,7 +26,7 @@
         <div class="main">
             <div class="main_vis">
                 <div class="bg"></div>
-                <div class="con" data-tilt>
+                <div class="inner" data-tilt>
                     <div class="vis_tit">
                         <h2 class="t_f link link--line" data-letters="WEB PUBLISHER">WEB PUBLISHER</h2>
                         <h2 class="t_s link link--line" data-letters="PORTFOLIO">PORTFOLIO</h2>
@@ -35,14 +37,34 @@
                 </div>
             </div>
             <div class="main_about">
-                <div class="con">
-                    <div class="greet">
-                        <strong>안녕하세요!</strong>
-                        <div class="changing-title"><strong>웹 퍼블리셔</strong></div>
-                        <strong>박규리 입니다:-) </strong>
+                <div class="inner">
+                    <div class="greet" data-aos="zoom-in">
+                        <div class="txt_wrap">
+                            <strong>안녕하세요 :-) </strong><br>
+                            <div class="changing-title"><strong>신입 웹 퍼블리셔</strong></div>
+                            <strong>박규리 입니다 </strong>
+                        </div>
                     </div>
                     <div class="keyword">
-                        
+                        <div class="con">
+                            <div class="key_box">
+                                <span class="key key_1">POSITIVE</span>
+                                <span class="key key_2">DEVELOPMENT</span>
+                                <span class="key key_3">COMMUNICATION</span>
+                                <span class="key key_4">DILIGENT</span>
+                            </div>
+                            <div class="key_tit">
+                                <strong>KEYWORDS</strong>
+                                <em>THAT EXPRESS</em>
+                                <em>MYSELF</em>
+                            </div>
+                            <div class="key_txt">
+                                <p><a href="javascript:void(0)" class="key_t_1"># 긍정적인 마인드</a>로 좌절하기 보다는 계속해서 도전합니다. </p>
+                                <p><a href="javascript:void(0)" class="key_t_2"># 성장하는 삶</a>을 추구합니다. 매일 조금이라도 꾸준한 성장을 해내기 위해 노력합니다.</p>
+                                <p><a href="javascript:void(0)" class="key_t_3"># 의사소통 능력</a>을 발휘하여 원활한 협업을 이끌어 냅니다. </p>
+                                <p>매사에 <a href="javascript:void(0)" class="key_t_4"># 성실히</a> 임하고 부지런히 행동합니다. </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

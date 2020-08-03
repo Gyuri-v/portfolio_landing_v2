@@ -1,7 +1,9 @@
 $(document).ready(function(){
     
+    //Plug-in AOS
+    AOS.init();
     
-    //main >> main_vis -- txt effect
+    //main >> main_vis -- text scroll masic ---------------------
     
     var controller = new ScrollMagic.Controller();
     
@@ -12,7 +14,7 @@ $(document).ready(function(){
     });
     
     var scene = new ScrollMagic.Scene({
-        triggerElement: ".main_vis .con",
+        triggerElement: ".main_vis .inner",
         duration: "20%",
         offset : +250,
     })
@@ -29,7 +31,7 @@ $(document).ready(function(){
     });
     
     var scene = new ScrollMagic.Scene({
-        triggerElement: ".main_vis .con",
+        triggerElement: ".main_vis .inner",
         duration: "20%",
         offset : +320,
     })
@@ -46,7 +48,7 @@ $(document).ready(function(){
     });
     
     var scene = new ScrollMagic.Scene({
-        triggerElement: ".main_vis .con",
+        triggerElement: ".main_vis .inner",
         duration: "20%",
         offset : +400,
     })
@@ -63,7 +65,7 @@ $(document).ready(function(){
     });
     
     var scene = new ScrollMagic.Scene({
-        triggerElement: ".main_vis .con",
+        triggerElement: ".main_vis .inner",
         duration: "20%",
         offset : +400,
     })
@@ -87,7 +89,7 @@ $(document).ready(function(){
 
     
     
-    // main >> main_about >> greet -- text change event
+    // main >> main_about >> greet -- text change event  ---------------------
     class ChangingTitle {
       constructor(x = null) {
         this.node = x;
@@ -134,10 +136,126 @@ $(document).ready(function(){
     }
 
     let ct = new ChangingTitle(document.querySelector(".changing-title"));
-    const texts = ["웹 퍼블리셔", "코드를 사랑하는", "협업에 자신있는", "열심히 하는"];
+    const texts = ["신입 웹 퍼블리셔", "코드를 사랑하는", "협업에 자신있는", "항상 열심히 하는"];
     let count = 0;
     setInterval(() => {
       ct.changeText(texts[++count % texts.length]);
     }, 2000);
+    
+    
+    
+    //main >> main_about >> keyword -- text scroll masic  ---------------------                             settween 이거 하나로 정리 & 위에 vis도
+    var controller = new ScrollMagic.Controller();
+	
+	var key1 = TweenMax.to('.key_1', 0.5, {
+		rotation: -60,
+		x: -140,
+		y: -110
+	});
+    
+	
+	var scene = new ScrollMagic.Scene({
+		triggerElement: ".keyword",
+		duration: "120%",
+        offset : +100,
+	})
+	.setTween(key1)
+	.addTo(controller)
+//	.addIndicators({
+//		name: "1"
+//	}) 
+    
+    var key2 = TweenMax.to('.key_2', 0.5, {
+		rotation: 40,
+		x: 100,
+		y: -140
+	});
+    
+    var scene = new ScrollMagic.Scene({
+		triggerElement: ".keyword",
+		duration: "120%",
+        offset : +100,
+	})
+	.setTween(key2)
+	.addTo(controller)
+//	.addIndicators({
+//		name: "2"
+//	}) 
+    
+    var key3 = TweenMax.to('.key_3', 0.5, {
+		rotation: 30,
+		x: -100,
+		y: 100
+	});
+    
+    var scene = new ScrollMagic.Scene({
+		triggerElement: ".keyword",
+		duration: "120%",
+        offset : +100,
+	})
+	.setTween(key3)
+	.addTo(controller)
+//	.addIndicators({
+//		name: "3"
+//	}) 
+    
+     var key4 = TweenMax.to('.key_4', 0.5, {
+		rotation: 40,
+		x: 80,
+		y: 110
+	});
+    
+    var scene = new ScrollMagic.Scene({
+		triggerElement: ".keyword",
+		duration: "120%",
+        offset : +100,
+	})
+	.setTween(key4)
+	.addTo(controller)
+//	.addIndicators({
+//		name: "4"
+//	}) 
+    
+    $('.new_slide_type a').click(function(){
+        $('.new_slide_type').slideUp();
+        
+        //버튼 글씨
+        $('.new_slide_label button').text($(this).text());
+        
+        idx = $(this).index() + 1;
+        //슬라이드
+        $('.new_slide1, .new_slide2, .new_slide3').removeClass('on');
+        $('.new_slide' + idx).addClass('on');
+        
+        //네비게이션
+        $('.slide1_nav, .slide2_nav, .slide3_nav').removeClass('on');
+        $('.slide' + idx + '_nav').addClass('on');
+        
+        //배너
+        $('.new_slide_banner>img').attr('src','img/banner/bn_new_slide' + idx + '.jpg')
+    });
+    
+    
+    //main >> main_about >> keyword -- hover event  ---------------------                                         반복문 정리하기
+    $('.key_t_1').hover(function(){
+        $('.key_1').css({backgroundColor:'#d2687b'});
+    },function(){
+        $('.key_1').css({backgroundColor:'#708658'});
+    })
+    $('.key_t_2').hover(function(){
+        $('.key_2').css({backgroundColor:'#d2687b'});
+    },function(){
+        $('.key_2').css({backgroundColor:'#708658'});
+    })
+    $('.key_t_3').hover(function(){
+        $('.key_3').css({backgroundColor:'#d2687b'});
+    },function(){
+        $('.key_3').css({backgroundColor:'#708658'});
+    })
+    $('.key_t_4').hover(function(){
+        $('.key_4').css({backgroundColor:'#d2687b'});
+    },function(){
+        $('.key_4').css({backgroundColor:'#708658'});
+    })
   
 })
