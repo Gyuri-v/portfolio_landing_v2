@@ -523,8 +523,8 @@ $(document).ready(function(){
     //main >> main_contact -- scroll h4 scale ----------------
     if( screenWidth > 768){
         var h4 = TweenMax.to('.main_cont h4', 1, {
-            scale: 80,
-            x: -750,
+            scale: 90,
+            x: -770,
         });
 
         var scene = new ScrollMagic.Scene({
@@ -575,6 +575,36 @@ $(document).ready(function(){
         $('.link--kukuri').removeClass('link--kukuri');
     }
     
+    //copy text	
+//    $('.main_cont .cont_txt .detail').click(function(){
+//		var text = $(this).html();
+//		text = text.replace(/ - /gi, "");
+//		$('#clip_target').val(text);
+//		$('#clip_target').select();
+//
+//		try{
+//			document.execCommand("copy");
+//		} catch(err) { 
+//			alert('err');
+//		}
+//    });
+    
+    
     
   
 })
+
+   
+function copyEmail() {
+  var copyText = document.getElementById("copyEmail");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+}
+function copyNumber() {
+  var copyText = document.getElementById("copyNumber");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+}
+    

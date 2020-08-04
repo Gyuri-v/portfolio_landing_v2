@@ -191,8 +191,10 @@ transition: 0.3s ease-in-out;
 -o-transition: 0.3s ease-in-out;}
 .main_cont .cont_txt:hover .detail{ display: inline-block;}
 .main_cont .cont_txt .detail:hover::after{ width: 100%;}
+.main_cont .cont_txt .detail em{ font-weight: bold; color: #f1f1f1;}
 .main_cont .img_wrap{ position: relative; z-index: -1;}
 .main_cont .img_wrap .cont_img{ width: 400px; height: 400px; margin: auto; background: url(../img/bg/bg_contact.png) no-repeat; background-size: cover;}
+.main_cont input{ position: absolute; left: -99999px;}
 
 
 
