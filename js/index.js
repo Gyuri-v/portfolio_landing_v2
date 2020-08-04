@@ -14,7 +14,7 @@ $(document).ready(function(){
     });
     
     var scene = new ScrollMagic.Scene({
-        triggerElement: ".main_vis .inner",
+        triggerElement: ".main_vis .con",
         duration: "20%",
         offset : +250,
     })
@@ -31,7 +31,7 @@ $(document).ready(function(){
     });
     
     var scene = new ScrollMagic.Scene({
-        triggerElement: ".main_vis .inner",
+        triggerElement: ".main_vis .con",
         duration: "20%",
         offset : +320,
     })
@@ -48,7 +48,7 @@ $(document).ready(function(){
     });
     
     var scene = new ScrollMagic.Scene({
-        triggerElement: ".main_vis .inner",
+        triggerElement: ".main_vis .con",
         duration: "20%",
         offset : +400,
     })
@@ -66,7 +66,7 @@ $(document).ready(function(){
     });
     
     var scene = new ScrollMagic.Scene({
-        triggerElement: ".main_vis .inner",
+        triggerElement: ".main_vis .con",
         duration: "20%",
         offset : +400,
     })
