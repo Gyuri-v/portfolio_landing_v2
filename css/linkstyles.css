@@ -18,14 +18,12 @@
 	overflow: hidden;
 	line-height: 0.75;
 	color: transparent;
-/*
     -webkit-animation: v_t_color 0.5s 1;
     animation: v_t_color 0.5s 1;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     -webkit-animation-delay: 1.5s;
     animation-delay: 1.5s;
-*/
 }
 /*
 .link--kukuri.t_s {
@@ -45,11 +43,9 @@
   100% { color: transparent;}
 }
 */
-/*
 .link--kukuri:hover {
 	color: transparent;
 }
-*/
 
 .link--kukuri::after {
 	content: '';
@@ -62,12 +58,10 @@
 	background: #F9F9F9;
 	-webkit-transform: translate3d(-100%,0,0);
 	transform: translate3d(-100%,0,0);
-/*
 	-webkit-transition: -webkit-transform 0.4s;
 	transition: transform 0.4s;
 	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-*/
     -webkit-animation: v_t_line 0.4s 1;
     animation: v_t_line 0.4s 1;
     -webkit-animation-delay: 1s;
@@ -77,32 +71,11 @@
     -webkit-animation-timing-function: cubic-bezier(0.7,0,0.3,1);
     animation-timing-function: cubic-bezier(0.7,0,0.3,1);
 }
-.link--kukuri.t_s::after {
-	-webkit-animation-delay: 1.5s;
-    animation-delay: 1.5s;
-}
-.link--kukuri.t_t::after {
-	-webkit-animation-delay: 2s;
-    animation-delay: 2s;
-}
-@-webkit-keyframes v_t_line {
-  0%   { -webkit-transform: translate3d(-100%,0,0);
-	transform: translate3d(-100%,0,0); }
-  100% { -webkit-transform: translate3d(100%,0,0);
-	transform: translate3d(100%,0,0); }
-}
-@keyframes v_t_line {
-  0%   { -webkit-transform: translate3d(-100%,0,0);
-	transform: translate3d(-100%,0,0); }
-  100% { -webkit-transform: translate3d(100%,0,0);
-	transform: translate3d(100%,0,0); }
-}
-/*
+
 .link--kukuri:hover::after {
 	-webkit-transform: translate3d(100%,0,0);
 	transform: translate3d(100%,0,0);
 }
-*/
 
 .link--kukuri::before {
 	content: attr(data-letters);
@@ -112,10 +85,8 @@
 	color: #c5c2b8;
 	white-space: nowrap;
 	width: 0%;
-/*
 	-webkit-transition: width 0.4s 0.3s;
 	transition: width 0.4s 0.3s;
-*/
     -webkit-animation: v_t_txt 0.5s 1;
     animation: v_t_txt 0.5s 1;
     -webkit-animation-delay: 1.5s;
@@ -123,22 +94,7 @@
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
-.link--kukuri.t_s::before {
-	-webkit-animation-delay: 2s;
-    animation-delay: 2s;
-}
-.link--kukuri.t_t::before {
-	-webkit-animation-delay: 2.5s;
-    animation-delay: 2.5s;
-}
-@-webkit-keyframes v_t_txt {
-  0%   { width: 0%; }
-  100% { width: 100%; }
-}
-@keyframes v_t_txt {
-  0%   { width: 0%; }
-  100% { width: 100%; }
-}
+
 /*
 .link--kukuri:hover::before {
 	width: 100%;

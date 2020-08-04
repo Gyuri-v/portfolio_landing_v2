@@ -20,9 +20,9 @@ $(document).ready(function(){
     })
     .setTween(tween1)
     .addTo(controller)
-//    .addIndicators({
-//        name: "1"
-//    })
+    .addIndicators({
+        name: "1"
+    })
     
     //vis_tit second txt
     var tween2 = TweenMax.to('.vis_tit .link.t_s', 0.5, {
@@ -37,9 +37,9 @@ $(document).ready(function(){
     })
     .setTween(tween2)
     .addTo(controller)
-//    .addIndicators({
-//        name: "2"
-//    })
+    .addIndicators({
+        name: "2"
+    })
     
     //vis_tit third txt
     var tween3 = TweenMax.to('.vis_tit .link.t_t', 0.5, {
@@ -53,14 +53,15 @@ $(document).ready(function(){
         offset : +400,
     })
     .setTween(tween3)
+    .setTween(tween4)
     .addTo(controller)
-//    .addIndicators({
-//        name: "3"
-//    })
+    .addIndicators({
+        name: "3"
+    })
     
     
     //vis_img
-    var tween3 = TweenMax.to('.vis_img', 0.5, {
+    var tween4 = TweenMax.to('.vis_img', 0.5, {
         opacity: 0,
     });
     
@@ -69,11 +70,11 @@ $(document).ready(function(){
         duration: "20%",
         offset : +400,
     })
-    .setTween(tween3)
+    .setTween(tween4)
     .addTo(controller)
-//    .addIndicators({
-//        name: "4"
-//    })
+    .addIndicators({
+        name: "4"
+    })
     
     
 
@@ -161,9 +162,9 @@ $(document).ready(function(){
 	})
 	.setTween(key1)
 	.addTo(controller)
-//	.addIndicators({
-//		name: "1"
-//	}) 
+	.addIndicators({
+		name: "1"
+	}) 
     
     var key2 = TweenMax.to('.key_2', 0.5, {
 		rotation: 40,
@@ -178,9 +179,9 @@ $(document).ready(function(){
 	})
 	.setTween(key2)
 	.addTo(controller)
-//	.addIndicators({
-//		name: "2"
-//	}) 
+	.addIndicators({
+		name: "2"
+	}) 
     
     var key3 = TweenMax.to('.key_3', 0.5, {
 		rotation: 30,
@@ -195,9 +196,9 @@ $(document).ready(function(){
 	})
 	.setTween(key3)
 	.addTo(controller)
-//	.addIndicators({
-//		name: "3"
-//	}) 
+	.addIndicators({
+		name: "3"
+	}) 
     
      var key4 = TweenMax.to('.key_4', 0.5, {
 		rotation: 40,
@@ -212,9 +213,9 @@ $(document).ready(function(){
 	})
 	.setTween(key4)
 	.addTo(controller)
-//	.addIndicators({
-//		name: "4"
-//	}) 
+	.addIndicators({
+		name: "4"
+	}) 
     
     $('.new_slide_type a').click(function(){
         $('.new_slide_type').slideUp();
@@ -323,5 +324,34 @@ $(document).ready(function(){
 		name: "bg3"
 	}) 
     
+    
+    
+    
+    var h4 = TweenMax.to('.main_cont h4', 1, {
+		scale: 80,
+        x: -700,
+	});
+    
+    var scene = new ScrollMagic.Scene({
+		triggerElement: ".main_cont",
+		duration: "100%",
+        offset: 0,
+	})
+	.setTween(h4)
+    .setPin(h4, {pushFollowers: false})
+	.addTo(controller)
+	.addIndicators({
+		name: "h4"
+	}) 
+    
+    
+    /* main >> contact -- Tilt */
+    setInterval(function () {
+      $('.main_cont .img_wrap').tilt({
+        reset: false,
+        speed: 400,
+        maxTilt: 20,
+      });
+    }, 6400);
   
 })
