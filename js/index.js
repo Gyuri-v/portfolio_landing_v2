@@ -237,6 +237,19 @@ $(document).ready(function(){
     
     
     //main >> main_about >> keyword -- hover event  ---------------------                                         반복문 정리하기
+    
+//    var key = $('.key').index();
+//    
+//    for( var i=0; i<key.length; i++){
+//        var idx = [i] + 1;
+//        
+//        $('.key_t_'+idx).hover(function(){
+//            $('.key_'+idx).css({backgroundColor:'#d2687b'});
+//        },function(){
+//            $('.key_'+idx).css({backgroundColor:'#708658'});
+//        })
+//    }
+    
     $('.key_t_1').hover(function(){
         $('.key_1').css({backgroundColor:'#d2687b'});
     },function(){
@@ -257,5 +270,58 @@ $(document).ready(function(){
     },function(){
         $('.key_4').css({backgroundColor:'#708658'});
     })
+    
+    
+    //main >> main_proj -- scroll pin -----------------
+    
+    var controller = new ScrollMagic.Controller({
+        globalSceneOptions: {
+            triggerHook: 'onLeave',
+            duration: "50%"
+        }
+	});
+ 	var slides = document.querySelectorAll(".project");
+
+	for (var i=0; i<slides.length; i++) {
+		var scene = new ScrollMagic.Scene({
+			triggerElement: slides[i]
+		})
+		.setPin(slides[i], {pushFollowers: false})
+		.addIndicators() 
+		.addTo(controller);
+	}
+    
+    
+    //main >> main_proj -- scroll bg color ----------------
+    var bg2 = TweenMax.to('.bg', 0.5, {
+		backgroundColor: '#0d4432',
+	});
+    
+    var scene = new ScrollMagic.Scene({
+		triggerElement: ".proj_2",
+		duration: "100%",
+        offset : -350,
+	})
+	.setTween(bg2)
+	.addTo(controller)
+	.addIndicators({
+		name: "bg2"
+	}) 
+    
+    var bg3 = TweenMax.to('.bg', 0.5, {
+		backgroundColor: '#005982',
+	});
+    
+    var scene = new ScrollMagic.Scene({
+		triggerElement: ".proj_3",
+		duration: "100%",
+        offset : -350,
+	})
+	.setTween(bg3)
+	.addTo(controller)
+	.addIndicators({
+		name: "bg3"
+	}) 
+    
   
 })

@@ -115,4 +115,45 @@ transition: 0.3s ease-in-out;
 
 
 
-.main_proj{ width: 100%; height: 2000px; }
+.main_proj{ width: 100%; position: relative; padding-bottom: 130px; box-sizing: border-box; }
+.main_proj .proj_ui{ width: 100%; height: 100%; position: absolute; bottom: 0; z-index: -1;}
+.main_proj .proj_ui_sticky{ width: 100%; height: 100vh; position: -webkit-sticky; position: sticky; top: 0; left: 0;}
+.main_proj .proj_ui_sticky .txt_wrap{ width: 50%; height: 100%; padding: 100px 20px; box-sizing: border-box; float: left;}
+.main_proj .proj_ui_sticky .txt_wrap .proj_tit .tit{ height: 36px; overflow: hidden;}
+/*.main_proj .proj_ui_sticky .txt_wrap .proj_tit .tit .wrap{ margin-top: -36px;}*/
+.main_proj .proj_ui_sticky .txt_wrap .proj_tit .tit strong{ display: block; font-size: 24px; font-weight: bold; line-height: 36px;}
+.main_proj .proj_ui_sticky .txt_wrap .proj_tit .name{ height: 48px; overflow: hidden;}
+.main_proj .proj_ui_sticky .txt_wrap .proj_tit .name h4{ display: block; font-size: 36px; font-weight: bold; line-height: 48px;}
+.main_proj .proj_ui_sticky .txt_wrap .proj_tit .type{ height: 36px; overflow: hidden;}
+.main_proj .proj_ui_sticky .txt_wrap .proj_tit .type strong{ display: block; font-size: 20px; font-weight: bold; line-height: 36px;}
+
+.main_proj .proj_ui_sticky .txt_wrap .proj_progress{ position: absolute; bottom: 50px;}
+.main_proj .proj_ui_sticky .txt_wrap .proj_progress .proj_progress_count{ width: 30px; height: 30px; overflow: hidden; float: left;}
+.main_proj .proj_ui_sticky .txt_wrap .proj_progress .proj_progress_count em{ display: block; font-size: 24px; line-height: 30px; text-align: center;}
+.main_proj .proj_ui_sticky .txt_wrap .proj_progress .proj_progress_bar{ width: 100px; height: 2px; float: left; position: relative; margin: 14px 10px; overflow: hidden;}
+.main_proj .proj_ui_sticky .txt_wrap .proj_progress .proj_progress_bar .bar_back{ width: 100px; height: 2px; background-color: #999; position: absolute; top: 0; left: 0;}
+.main_proj .proj_ui_sticky .txt_wrap .proj_progress .proj_progress_bar .bar_front{ width: 100px; height: 2px; background-color: #111; position: absolute; top: 0; left: -50%;}
+.main_proj .proj_ui_sticky .txt_wrap .proj_progress .proj_progress_total{ width: 30px; height: 30px; float: left; }
+.main_proj .proj_ui_sticky .txt_wrap .proj_progress .proj_progress_total em{ display: block; font-size: 24px; line-height: 30px; text-align: center;}
+.main_proj .proj_ui_sticky .img_wrap{  width: 50%; height: 100%; float: right;position: relative;}
+.main_proj .proj_ui_sticky .img_wrap .bg{ width: 80%; height: 60vh; background-color: #444; position: absolute; top: 120px; right: 0; }
+
+.main_proj .project{ width: 100%; height: 900px; }
+/*
+.main_proj .project.proj_1{ background-color: gray;}
+.main_proj .project.proj_2{ background-color: green;}
+.main_proj .project.proj_3{ background-color: skyblue;}
+*/
+.main_proj .project .txt_wrap{ width: 50%; height: 100%; float: left; padding: 250px 20px 100px; box-sizing: border-box;}
+.main_proj .project .txt_wrap p{ font-size: 16px; line-height: 40px;}
+
+.main_proj .project .img_wrap{ width: 50%; height: 100%; float: right; position: relative;}
+.main_proj .project.proj_1 .img_wrap .web{ width: 550px; height: 320px; border-radius: 20px; position: absolute; top: 150px; left: 20px; background: url(../img/bg/bg_proj_1_web.jpg) no-repeat; background-size: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.5);}
+.main_proj .project.proj_1 .img_wrap .mobile{ width: 180px; height: 320px; border-radius: 20px; position: absolute; top: 250px; right: 30px; background: url(../img/bg/main_proj1_mob.png) no-repeat; background-size: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.5);}
+.main_proj .project.proj_2 .img_wrap .web{ width: 550px; height: 320px; border-radius: 20px; position: absolute; top: 150px; left: 0px; background: url(../img/bg/bg_proj_2_web.jpg) no-repeat; background-size: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.5);}
+.main_proj .project.proj_3 .img_wrap .mobile1{ width: 240px; height: 420px; border-radius: 20px; position: absolute; top: 100px; left: 100px; background: url(../img/bg/main_proj1_mob.png) no-repeat; background-size: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.5);}
+.main_proj .project.proj_3 .img_wrap .mobile2{ width: 240px; height: 420px; border-radius: 20px; position: absolute; top: 200px; right: 30px; background: url(../img/bg/main_proj1_mob.png) no-repeat; background-size: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.5);}
+
+
+
+.main_cont{ width: 100%; height: 800px;}
