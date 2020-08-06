@@ -53,7 +53,9 @@ table {
 
 
 /*header*/
-
+.header{ width: 100%; padding: 20px 30px; position: fixed; z-index: 9999;}
+.header .logo{ display: inline-block;}
+.header .logo a{ display: block; font-size: 30px; font-weight: bold; letter-spacing: 2px; color: #f1f1f1;}
 
 /*main*/
 .main{ width: 100%; overflow: hidden;}
@@ -221,6 +223,10 @@ transition: 0.3s ease-in-out;
 }
 
 @media screen and (max-width : 768px){
+    
+    /*header*/
+    .header{ padding: 20px 20px; }
+    .header .logo a{ font-size: 24px; }
     
     /*main_vis*/
     .main_vis .con .vis_tit h2.t_f{ font-size: 28px;}
