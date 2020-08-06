@@ -13,7 +13,7 @@
 	display: inline-block;
 }
 
-/* line */
+/* main >> main_visual -- line text animation*/
 .link--line {
 	text-transform: uppercase;
 	font-weight: 900;
@@ -95,65 +95,7 @@
 
 
 
-/* main >> main_about  >> greet -- text changing event */
-@keyframes letter-in {
-  0% {
-    top: 28px;
-  }
-  100% {
-    top: 0em;
-  }
-}
-@keyframes letter-out {
-  0% {
-    top: 0em;
-  }
-  100% {
-    top: -28px;
-  }
-}
-
-.changing-title {
-    font-size: 28px;
-    width: 200px; height: 28px;
-    display: inline-block;
-    position: relative;
-    top: 5px;
-    overflow-y: hidden;
-    margin-left: 10px;
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-}
-.changing-title strong {
-    color: #dddad2;
-    font-weight: bold;
-    font-size: 28px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: 0;
-}
-.letter {
-    position: relative;
-    top: 28px;
-}
-.in {
-    animation-name: letter-in;
-    animation-duration: 0.3s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-}
-.out {
-    top: 0;
-    animation-name: letter-out;
-    animation-duration: 0.3s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-}
-
-
-
-/* main >> main_contact -- text hover animation */
+/* main >> main_contact -- kukuri text hover animation */
 .link--kukuri {
 	text-transform: uppercase;
 	font-weight: 900;

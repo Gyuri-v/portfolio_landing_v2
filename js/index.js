@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    //Plug-in AOS
+    //AOS
     AOS.init();
 
 
@@ -61,7 +61,7 @@ $(document).ready(function(){
 
 
 
-		//bg
+    //bg
 
     var tween_bg = TweenMax.to('.all_bg2', 0.5, {
           opacity: 1,
@@ -69,7 +69,7 @@ $(document).ready(function(){
 
 
     var scene = new ScrollMagic.Scene({
-          triggerElement: ".foot",
+          triggerElement: ".main_cont",
           offset :0,
       })
       .setTween(tween_bg)
@@ -159,7 +159,7 @@ $(document).ready(function(){
 //        })
     }
     if( screenWidth <= 768){
-                var controller = new ScrollMagic.Controller();
+        var controller = new ScrollMagic.Controller();
 
         //vis_tit first txt
         var tween1 = TweenMax.to('.vis_tit .link.t_f', 0.5, {
@@ -233,65 +233,8 @@ $(document).ready(function(){
 
 
 
-    // main >> main_about >> greet -- text change event  ---------------------
-    /*class ChangingTitle {
-      constructor(x = null) {
-        this.node = x;
-        this.letterfy(this.node.querySelector("strong"));
-      }
-      letterfy(node) {
-        let text = node.innerText;
-        node.innerText = "";
-        node.classList.add("current");
-        for (let c in text) {
-          let span = document.createElement("span");
-          span.innerText = text[c];
-          span.classList.add("letter", "in");
-          span.style.animationDelay = `${c * 0.1}s`;
-          node.appendChild(span);
-        }
-      }
-      changeText(newText) {
-        let oldTitle = this.node.querySelector(".current");
-        let i = 0;
-        for (let letter of oldTitle.children) {
-          letter.style.animationDelay = `${i++ * 0.1}s`;
-          letter.classList.remove("in");
-          letter.classList.add("out");
-        }
-        oldTitle.classList.remove("current");
-        let newTitle = document.createElement("strong");
-        newTitle.classList.add("current");
-        for (let c in newText) {
-          let span = document.createElement("span");
-          span.innerText = newText[c];
-          span.classList.add("letter", "in");
-          span.style.animationDelay = `${c * 0.1 + 0.5}s`;
-          newTitle.appendChild(span);
-        }
-        this.node.appendChild(newTitle);
-        setTimeout(this.removeNode(oldTitle), 2000);
-      }
-      removeNode(x) {
-        return () => {
-          x.remove();
-        };
-      }
-    }
-
-    let ct = new ChangingTitle(document.querySelector(".changing-title"));
-    const texts = ["신입 웹 퍼블리셔", "코드를 사랑하는", "협업에 자신있는", "항상 열심히 하는"];
-    let count = 0;
-    setInterval(() => {
-      ct.changeText(texts[++count % texts.length]);
-    }, 2000);
-	*/
-
-
-
-    //main >> main_about >> keyword -- text scroll masic  ---------------------                             settween 이거 하나로 정리 & 위에 vis도
-
-    if( screenWidth > 768){
+    //main >> main_about >> keyword -- text scroll masic  ---
+    if( screenWidth > 768 ){
         var controller = new ScrollMagic.Controller();
 
         var key1 = TweenMax.to('.key_1', 0.5, {
@@ -342,7 +285,7 @@ $(document).ready(function(){
         var scene = new ScrollMagic.Scene({
             triggerElement: ".keyword",
             duration: "120%",
-            offset : +100,
+            offset : 0,
         })
         .setTween(key3)
         .addTo(controller)
@@ -360,7 +303,7 @@ $(document).ready(function(){
         var scene = new ScrollMagic.Scene({
             triggerElement: ".keyword",
             duration: "120%",
-            offset : +100,
+            offset : 0,
         })
         .setTween(key4)
         .addTo(controller)
@@ -369,7 +312,7 @@ $(document).ready(function(){
 //        })
 
 
-        var key4 = TweenMax.to('.key_5', 0.5, {
+        var key5 = TweenMax.to('.key_5', 0.5, {
           ease: Power4.easeOuteaseOut,
            rotation: -40,
            x: 380,
@@ -379,9 +322,198 @@ $(document).ready(function(){
         var scene = new ScrollMagic.Scene({
            triggerElement: ".keyword",
            duration: "120%",
-           offset : +100,
+           offset : 0,
+        })
+        .setTween(key5)
+        .addTo(controller)
+    }
+    
+    
+    if( screenWidth < 480 ){
+        var controller = new ScrollMagic.Controller();
+
+        var key1 = TweenMax.to('.key_1', 0.5, {
+          ease: Power4.easeOuteaseOut,
+            rotation: -100,
+            x: -100,
+            y: -110
+        });
+
+
+        var scene = new ScrollMagic.Scene({
+          ease: Power4.easeOuteaseOut,
+            triggerElement: ".keyword",
+            duration: "100%",
+            offset : +150,
+        })
+        .setTween(key1)
+        .addTo(controller)
+//        .addIndicators({
+//            name: "1"
+//        })
+
+        var key2 = TweenMax.to('.key_2', 0.5, {
+          ease: Power4.easeOuteaseOut,
+            rotation: 80,
+            x: 80,
+            y: -50
+        });
+
+        var scene = new ScrollMagic.Scene({
+            triggerElement: ".keyword",
+            duration: "100%",
+            offset : +150,
+        })
+        .setTween(key2)
+        .addTo(controller)
+//        .addIndicators({
+//            name: "2"
+//        })
+
+        var key3 = TweenMax.to('.key_3', 0.5, {
+          ease: Power4.easeOuteaseOut,
+            rotation: 30,
+            x: -30,
+            y: 20
+        });
+
+        var scene = new ScrollMagic.Scene({
+            triggerElement: ".keyword",
+            duration: "100%",
+            offset : +150,
+        })
+        .setTween(key3)
+        .addTo(controller)
+//        .addIndicators({
+//            name: "3"
+//        })
+
+         var key4 = TweenMax.to('.key_4', 0.5, {
+           ease: Power4.easeOuteaseOut,
+            rotation: 40,
+            x: 70,
+            y: 30
+        });
+
+        var scene = new ScrollMagic.Scene({
+            triggerElement: ".keyword",
+            duration: "100%",
+            offset : +150,
         })
         .setTween(key4)
+        .addTo(controller)
+//        .addIndicators({
+//            name: "4"
+//        })
+
+
+        var key5 = TweenMax.to('.key_5', 0.5, {
+          ease: Power4.easeOuteaseOut,
+           rotation: -40,
+           x: 100,
+           y: -80
+        });
+
+        var scene = new ScrollMagic.Scene({
+           triggerElement: ".keyword",
+           duration: "100%",
+           offset : +150,
+        })
+        .setTween(key5)
+        .addTo(controller)
+    }
+    
+    if( screenWidth <= 768 && screenWidth > 480 ){
+        var controller = new ScrollMagic.Controller();
+
+        var key1 = TweenMax.to('.key_1', 0.5, {
+          ease: Power4.easeOuteaseOut,
+            rotation: -100,
+            x: -170,
+            y: -110
+        });
+
+
+        var scene = new ScrollMagic.Scene({
+          ease: Power4.easeOuteaseOut,
+            triggerElement: ".keyword",
+            duration: "100%",
+            offset : -50,
+        })
+        .setTween(key1)
+        .addTo(controller)
+//        .addIndicators({
+//            name: "1"
+//        })
+
+        var key2 = TweenMax.to('.key_2', 0.5, {
+          ease: Power4.easeOuteaseOut,
+            rotation: 80,
+            x: 150,
+            y: -50
+        });
+
+        var scene = new ScrollMagic.Scene({
+            triggerElement: ".keyword",
+            duration: "100%",
+            offset : -50,
+        })
+        .setTween(key2)
+        .addTo(controller)
+//        .addIndicators({
+//            name: "2"
+//        })
+
+        var key3 = TweenMax.to('.key_3', 0.5, {
+          ease: Power4.easeOuteaseOut,
+            rotation: 30,
+            x: -100,
+            y: 20
+        });
+
+        var scene = new ScrollMagic.Scene({
+            triggerElement: ".keyword",
+            duration: "100%",
+            offset : +100,
+        })
+        .setTween(key3)
+        .addTo(controller)
+//        .addIndicators({
+//            name: "3"
+//        })
+
+         var key4 = TweenMax.to('.key_4', 0.5, {
+           ease: Power4.easeOuteaseOut,
+            rotation: 40,
+            x: 140,
+            y: 30
+        });
+
+        var scene = new ScrollMagic.Scene({
+            triggerElement: ".keyword",
+            duration: "100%",
+            offset : +100,
+        })
+        .setTween(key4)
+        .addTo(controller)
+//        .addIndicators({
+//            name: "4"
+//        })
+
+
+        var key5 = TweenMax.to('.key_5', 0.5, {
+          ease: Power4.easeOuteaseOut,
+           rotation: -40,
+           x: 170,
+           y: -80
+        });
+
+        var scene = new ScrollMagic.Scene({
+           triggerElement: ".keyword",
+           duration: "100%",
+           offset : +100,
+        })
+        .setTween(key5)
         .addTo(controller)
     }
 
@@ -459,78 +591,78 @@ $(document).ready(function(){
 ////        })
 //    }
 
-    if( screenWidth <= 480 ){
-        var controller = new ScrollMagic.Controller();
-
-        var key1 = TweenMax.to('.key_1', 0.5, {
-            rotation: -60,
-            x: -60,
-            y: -80
-        });
-
-
-        var scene = new ScrollMagic.Scene({
-            triggerElement: ".keyword",
-            duration: "100%",
-            offset : 0,
-        })
-        .setTween(key1)
-        .addTo(controller)
-//        .addIndicators({
-//            name: "1"
+//    if( screenWidth <= 480 ){
+//        var controller = new ScrollMagic.Controller();
+//
+//        var key1 = TweenMax.to('.key_1', 0.5, {
+//            rotation: -60,
+//            x: -60,
+//            y: -80
+//        });
+//
+//
+//        var scene = new ScrollMagic.Scene({
+//            triggerElement: ".keyword",
+//            duration: "100%",
+//            offset : 0,
 //        })
-
-        var key2 = TweenMax.to('.key_2', 0.5, {
-            rotation: 40,
-            x: 0,
-            y: -80
-        });
-
-        var scene = new ScrollMagic.Scene({
-            triggerElement: ".keyword",
-            duration: "100%",
-            offset : 0,
-        })
-        .setTween(key2)
-        .addTo(controller)
-//        .addIndicators({
-//            name: "2"
+//        .setTween(key1)
+//        .addTo(controller)
+////        .addIndicators({
+////            name: "1"
+////        })
+//
+//        var key2 = TweenMax.to('.key_2', 0.5, {
+//            rotation: 40,
+//            x: 0,
+//            y: -80
+//        });
+//
+//        var scene = new ScrollMagic.Scene({
+//            triggerElement: ".keyword",
+//            duration: "100%",
+//            offset : 0,
 //        })
-
-        var key3 = TweenMax.to('.key_3', 0.5, {
-            rotation: 30,
-            x: -20,
-            y: 20
-        });
-
-        var scene = new ScrollMagic.Scene({
-            triggerElement: ".keyword",
-            duration: "100%",
-            offset : 0,
-        })
-        .setTween(key3)
-        .addTo(controller)
-//        .addIndicators({
-//            name: "3"
+//        .setTween(key2)
+//        .addTo(controller)
+////        .addIndicators({
+////            name: "2"
+////        })
+//
+//        var key3 = TweenMax.to('.key_3', 0.5, {
+//            rotation: 30,
+//            x: -20,
+//            y: 20
+//        });
+//
+//        var scene = new ScrollMagic.Scene({
+//            triggerElement: ".keyword",
+//            duration: "100%",
+//            offset : 0,
 //        })
-
-         var key4 = TweenMax.to('.key_4', 0.5, {
-            rotation: 40,
-            x: 10,
-            y: 20
-        });
-
-        var scene = new ScrollMagic.Scene({
-            triggerElement: ".keyword",
-            duration: "100%",
-            offset : 0,
-        })
-        .setTween(key4)
-        .addTo(controller)
-//        .addIndicators({
-//            name: "4"
+//        .setTween(key3)
+//        .addTo(controller)
+////        .addIndicators({
+////            name: "3"
+////        })
+//
+//         var key4 = TweenMax.to('.key_4', 0.5, {
+//            rotation: 40,
+//            x: 10,
+//            y: 20
+//        });
+//
+//        var scene = new ScrollMagic.Scene({
+//            triggerElement: ".keyword",
+//            duration: "100%",
+//            offset : 0,
 //        })
-    }
+//        .setTween(key4)
+//        .addTo(controller)
+////        .addIndicators({
+////            name: "4"
+////        })
+//    }
 
 
 
@@ -638,26 +770,15 @@ $(document).ready(function(){
         $('.link--kukuri').removeClass('link--kukuri');
     }
 
-    //copy text
-//    $('.main_cont .cont_txt .detail').click(function(){
-//		var text = $(this).html();
-//		text = text.replace(/ - /gi, "");
-//		$('#clip_target').val(text);
-//		$('#clip_target').select();
-//
-//		try{
-//			document.execCommand("copy");
-//		} catch(err) {
-//			alert('err');
-//		}
-//    });
+    
+
 
 
 
 
 })
 
-
+//copy text
 function copyEmail() {
   var copyText = document.getElementById("copyEmail");
       copyText.select();
