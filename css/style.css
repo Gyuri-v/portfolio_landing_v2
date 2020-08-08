@@ -178,9 +178,9 @@ transition: 0.3s ease-in-out;
     .header .logo a{ font-size: 24px; }
     
     /*main_vis*/
-    .main_vis .con .vis_tit h2.t_f{ font-size: 28px;}
-    .main_vis .con .vis_tit h2.t_s{ font-size: 60px;}
-    .main_vis .con .vis_tit h2.t_t{ font-size: 50px;}
+    .main_vis .con .vis_tit h2.t_f{ font-size: 36px;}
+    .main_vis .con .vis_tit h2.t_s{ font-size: 64px;}
+    .main_vis .con .vis_tit h2.t_t{ font-size: 52px;}
     .main_vis .con .vis_img { width: 300px; height: 300px;}
 
     /*main_about*/
@@ -205,17 +205,18 @@ transition: 0.3s ease-in-out;
     .main_cont .txt_wrap .cont_txt .detail{ display: block; font-size: 14px; line-height: 20px; }
     
     /*footer*/
-    .footer .madeby{ position: inherit; text-align: center; left: 0; margin-bottom: 5px;}
-    .footer .copyright{ position: inherit; text-align: center;}
+    .footer .madeby{ position: inherit; text-align: center; left: 0; margin-bottom: 5px; font-size: 12px;}
+    .footer .copyright{ position: inherit; text-align: center; font-size: 14px;}
+    
     
 }
 
 @media screen and (max-width : 480px){
 
     /*main_vis*/
-    .main_vis .con .vis_tit h2.t_f{ font-size: 20px;}
-    .main_vis .con .vis_tit h2.t_s{ font-size: 40px;}
-    .main_vis .con .vis_tit h2.t_t{ font-size: 35px;}
+    .main_vis .con .vis_tit h2.t_f{ font-size: 30px;}
+    .main_vis .con .vis_tit h2.t_s{ font-size: 48px;}
+    .main_vis .con .vis_tit h2.t_t{ font-size: 40px;}
     .main_vis .con .vis_img { width: 240px; height: 240px;}
 
     /*main_about*/
